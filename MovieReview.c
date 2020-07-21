@@ -6,6 +6,7 @@
  */
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 #define YEAR 2020
 int main()
 {
