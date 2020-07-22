@@ -1,6 +1,8 @@
 /*
  * GuessingGame.c
- *
+ * Seed a random value, ask user to guess outcome of 2 dice rolls.
+ * Use random values for dice rolls and compare against the guessed value.
+ * Invite to try again.
  *  Created on: 21-Jul-2020
  *      Author: dc
  */

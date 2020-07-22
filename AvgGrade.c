@@ -1,6 +1,6 @@
 /*
  * AvgGrade.c
- *
+ * Calculate avg score for a class, assuming some students may be absent for the test.
  *  Created on: 19-Jul-2020
  *      Author: dc
  */

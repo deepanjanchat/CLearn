@@ -1,6 +1,8 @@
 /*
  * MovieReview.c
- *
+ * User provides movie names and ratings.
+ * Identify the best and worst movies.
+ * Gap - only single word movie names since gets() is deemed dangerous to use in Clang.
  *  Created on: 17-Jul-2020
  *      Author: dc
  */
