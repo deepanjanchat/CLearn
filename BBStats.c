@@ -1,6 +1,7 @@
 /*
  * BBStats.c
  * this program has three arrays: one for scoring, one for rebounding, and one for assists.
+ * These are filled with random numbers from 1 to 75.
  * The program searches through the scoring totals, finds the game in which the player scored the most points,
  * and then prints the player’s total in all three categories in that particular game:
  *
@@ -8,13 +9,33 @@
  *      Author: dc
  */
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 int main()
 {
-	int score[7] = {35, 25, 40, 22, 43, 21, 42};
-	int rebound[7] = {6, 19, 21, 23, 6, 12, 9};
-	int assist[7] = {12, 17, 9, 12, 18, 16, 5};
+	int games, score[10], rebound[10], assist[10];
 	int i, maxScore = 0, bestGame, total;
-	for(i=0;i<7;i++){
+	srand(time(NULL));
+	printf("How many games were played? Enter any value up to 10.\n");
+	scanf(" %d", &games);
+	for(i=0;i<games;i++){
+		score[i] = (rand()%74)+1;
+		rebound[i] = (rand()%74)+1;
+		assist[i] = (rand()%74)+1;
+	}
+	printf("These are the scores:\n");
+	for(i=0;i<games;i++){
+		printf("For game %d, score was %d\n", i+1, score[i]);
+	}
+	printf("These are the rebounds:\n");
+	for(i=0;i<games;i++){
+		printf("For game %d, rebounds collected were %d\n", i+1, rebound[i]);
+	}
+	printf("These are the assists:\n");
+	for(i=0;i<games;i++){
+		printf("For game %d, assists were %d\n", i+1, assist[i]);
+	}
+	for(i=0;i<games;i++){
 		if(score[i]>maxScore){
 			maxScore = score[i];
 			bestGame = i;
