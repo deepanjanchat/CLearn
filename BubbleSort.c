@@ -1,6 +1,6 @@
 /*
  * BubbleSort.c
- * Generate a random array and sort that using the bubble sort algo.
+ * Generate a random array of 10 numbers between 0-100, and sort that using the bubble sort algo.
  * Show the sorted array.
  *  Created on: 23-Jul-2020
  *      Author: dc
