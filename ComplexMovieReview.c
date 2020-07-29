@@ -21,9 +21,9 @@ int main()
 	getchar(); //handle the newline from above scanf. Adds a trailing \n to the movie entry. getch() would have solved it, but not available as standard.
 	movies = malloc(num*sizeof(*movies)); //this is the mem allocation for the pointers to the movie names
 	ratings = (int *) malloc(num*sizeof(int));
-		if(!movies||!ratings){
-			printf("Not enough memory!");
-		}
+	if(!movies||!ratings){
+		printf("Not enough memory!");
+	}
 	for(i=0;i<num;i++){
 		movies[i]=malloc(MAX*sizeof(char)); //this is the mem allocation for the movie names whose pointers are in movies array
 	}
