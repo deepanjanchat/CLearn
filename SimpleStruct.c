@@ -31,7 +31,6 @@ int main(void)
 			fgets(books[i]->author, 31, stdin);
 			printf("\nHow many pages does the book have?\t");
 			scanf(" %d", &books[i]->pages);
-			getchar();
 			printf("\nWhat is the price?\t$");
 			scanf(" %f", &books[i]->price);
 			getchar(); //to handle the trailing \n from the scanf so fgets works in the next loop.
@@ -39,11 +38,11 @@ int main(void)
 	printf("Here is the collection of books -\n");
 	for(int i=0; i<num; i++)
 		{
-			printf("Title - %s\n", books[i]->title); //additional newline created. Problem needs to be solved.
-			printf("Author - %s\n", books[i]->author); // additional newline created.
+			printf("Title - %s\n", books[i]->title); //additional newline created due to fgets. Multiple threads exist on how to resolve that.
+			printf("Author - %s\n", books[i]->author); // additional newline created due to fgets.
 			printf("Pages - %d\n", books[i]->pages);
 			printf("Price - $%.2f\n", books[i]->price);
 			printf("\n");
 		}
-	free(books[num]);
+	free(books[num]); //program executes fine, but get an abort 6 error while freeing memory.
 }
