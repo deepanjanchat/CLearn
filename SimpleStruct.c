@@ -26,9 +26,9 @@ int main(void)
 		{
 			books[i] = (struct bookInv *) malloc(sizeof(struct bookInv));
 			printf("\nWhat is the name of this book?\t");
-			fgets(books[i]->title, 31, stdin);
+			fgets(books[i]->title, sizeof(books[i]->title), stdin);
 			printf("\nWho is the author?\t");
-			fgets(books[i]->author, 31, stdin);
+			fgets(books[i]->author, sizeof(books[i]->author), stdin);
 			printf("\nHow many pages does the book have?\t");
 			scanf(" %d", &books[i]->pages);
 			printf("\nWhat is the price?\t$");
